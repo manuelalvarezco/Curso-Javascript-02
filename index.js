@@ -20,12 +20,17 @@ console.log(PeliculaUno.repooducir());
 // Herencia
 
 class Serie extends Pelicula {
+
+    constructor(name, duration, capitulo) {
+        super(name, duration);
+        this.capitulo = capitulo;
+    }
     reproducirCapitulo() {
-        return `Reproduciendo capítulo ${this.name}`
+        return `Reproduciendo capítulo ${this.capitulo} de ${this.name}`
     }
 
 }
 
-const serieUno = new Serie('Batman', '3');
+const serieUno = new Serie('Batman', '2', '3');
 
 console.log(serieUno.reproducirCapitulo());
